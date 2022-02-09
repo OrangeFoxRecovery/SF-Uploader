@@ -10,10 +10,6 @@ on:
         DEVICE_CODENAME:
           description: "Device Codename:"
           required: true
-        
-        ROM_NAME:
-          description: "ROM Name:"
-          required: true
 
 defaults:
   run:
@@ -46,6 +42,6 @@ jobs:
 
       - name: Upload the Build
         run: |
-          export SF_UPLOAD_DIR=$DEVICE/$ROM
+          export SF_UPLOAD_DIR=$DEVICE
 
           sshpass -p ${SF_PASS} rsync -ae "ssh -o StrictHostKeyChecking=no" ${TMP_DIR}/* ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${SF_PROJECT}/${SF_UPLOAD_DIR}/
