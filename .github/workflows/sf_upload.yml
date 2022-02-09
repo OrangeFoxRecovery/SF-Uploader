@@ -27,10 +27,10 @@ env:
   # SourceForge Credentials
   SF_USERNAME: ${{ secrets.SF_USERNAME }}
   SF_PASS: ${{ secrets.SF_PASSWORD }}
-  SF_PROJECT: sushrut1101-roms
+  SF_PROJECT: orangefoxrecovery
 
   # Temp (Download) Directory
-  TMP_DIR: /tmp/sf_up
+  TMP_DIR: /tmp/fox
 
 jobs:
   build:
