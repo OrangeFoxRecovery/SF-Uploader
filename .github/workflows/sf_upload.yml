@@ -48,4 +48,4 @@ jobs:
         run: |
           export SF_UPLOAD_DIR=$DEVICE/$ROM
 
-          sshpass -p ${SF_PASS} rsync -ae "ssh -o StrictHostKeyChecking=no" ${TMP_DIR}/* --progress -r ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${SF_PROJECT}/${SF_UPLOAD_DIR}/
+          sshpass -p ${SF_PASS} rsync -aPe "ssh -o StrictHostKeyChecking=no" ${TMP_DIR}/* --progress -r ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${SF_PROJECT}/${SF_UPLOAD_DIR}/
